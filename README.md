@@ -8,6 +8,14 @@ Agendasys Server é uma API para a aplicação Agendasys
 Os serviços da Agendasys estão disponiveis através desta API Rest, que quando integrada com a aplicação Agendasys possibilita que todos os pacientes do brasil tenha uma melhor qualidade de vida. 
 Para utilizar a API, você precisará de um token no estilo `JWT`, esse token será utilizado para autenticação no serviço e o uso de suas funcionalidades.
 
+## Seu Token :D, mas só para teste
+
+```bash
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY3N2Q5ZDc5MTIzMjM0OGFhYWQ5OSIsImlhdCI6MTYwMDYxNDg3MSwiZXhwIjoxNjMyMTUwODcxfQ.GuoEtUXjxLGdoWgf8OCXBOti6colgdcjxEXYBdhZwL4
+```
+
+Envie este token no cabeçalho da requisição, no campo `Authorization`
+
 ## Dependências
 
 1. [Node.JS](https://nodejs.org/en/)
