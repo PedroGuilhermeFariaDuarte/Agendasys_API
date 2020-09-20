@@ -32,7 +32,12 @@ class App {
 
   middlewares() {
     this.server.use(cors({
-      origin: [ 'http://localhost:3000', 'http://localhost' ],
+      origin: [
+        'http://localhost:3000',
+        'http://localhost',
+        'https://agendasys.herokuapp.com/',
+        'https://agendasys.herokuapp.com'
+      ],
     }))
     this.server.use(express.json())
   }
