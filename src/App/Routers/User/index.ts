@@ -5,18 +5,19 @@ import UserController from "@controllers/User";
 
 // Middlewares
 import UserValidate from "@middleware/handler/User/dataValidate";
+import { Verify } from '@middleware/Authentication';
 
 const router: Router = express.Router()
 
 router.route("/user/create").post(UserValidate, UserController.store)
 
-router.route("/user/update/:idUser").put(UserValidate, UserController.update)
+router.route("/user/update/:idUser").put(Verify, UserValidate, UserController.update)
 
-router.route("/user/delete/:idUser").delete(UserController.delete)
+router.route("/user/delete/:idUser").delete(Verify, UserController.delete)
 
-router.route("/user/show/:idUser").get(UserController.show)
+router.route("/user/show/:idUser").get(Verify, UserController.show)
 
-router.route("/user/all/").get(UserController.index)
+router.route("/user/all/").get(Verify, UserController.index)
 
 // OFF
 router.route("/user/health/new").post();

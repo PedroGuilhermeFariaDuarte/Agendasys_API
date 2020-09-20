@@ -85,11 +85,7 @@ class Schedule {
   async delete(request: Request, response: Response) {
     try {
       // @ts-ignore
-      const deleteSchedule: Document = await ScheduleModel.findByIdAndDelete(request?.params?.idSchedule)
-
-      if (deleteSchedule) {
-        return HandlerError(response, 500, null, "Não foi possivel deletar seu agendamento")
-      }
+      await ScheduleModel.findByIdAndDelete(request?.params?.idSchedule)
 
       // @ts-ignore
       HandlerNotify(response, 200, null, "Seu agendamento foi cancelado com sucesso", { phone: request?.body?.phone }, false)
