@@ -1,6 +1,6 @@
-# Agendasys Server
+# Agendasys API
 
-Agendasys Server é uma API para a aplicação Agendasys
+Uma API para a aplicação Agendasys
 
 
 ## Introdução
