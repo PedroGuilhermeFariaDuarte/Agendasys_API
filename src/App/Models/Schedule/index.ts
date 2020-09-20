@@ -6,12 +6,20 @@ const schema: Schema = new mongoose.Schema({
     type: ObjectId,
     required: true,
   },
-  id_responsible: {
-    type: ObjectId,
+  name_responsible: {
+    type: String,
+    required: true
+  },
+  local: {
+    type: String,
+    required: true
+  },
+  specialty: {
+    type: String,
     required: true
   },
   date_schedule: {
-    type: Date,
+    type: String,
     required: true
   },
   qrcode: {

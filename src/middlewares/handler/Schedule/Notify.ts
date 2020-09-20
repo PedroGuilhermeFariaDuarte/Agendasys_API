@@ -1,5 +1,5 @@
-import { parseISO, format } from "date-fns"
-import pt from "date-fns/locale/pt";
+// import { parseISO, format } from "date-fns"
+// import pt from "date-fns/locale/pt";
 
 // Types
 import { Response } from "express";
@@ -16,11 +16,12 @@ export default async (response: Response, code: Number, success: any, descriptio
   if (type) {
 
     // @ts-ignore
-    const date_schedule = format(new Date(data?.date_schedule), "dd 'de' MMMM 'de' y 'ás' HH:m:s", {
-      locale: pt
-    })
 
-    messageSMS = `${description}\n\nAgendado para: ${date_schedule}\n\nUse este codigo ${data.qrcode} para consultar via WhatsApp`;
+    // const date_schedule = format(new Date(data?.date_schedule), "dd 'de' MMMM 'de' y 'ás' HH:m:s", {
+    //   locale: pt
+    // })
+
+    messageSMS = `${description}\n\nAgendado para: ${data?.date_schedule} em ${data.local}\nExame: ${data.specialty} com ${data.name_responsible}\n\nUse este codigo ${data.qrcode} para consultar mais informações via Whatsapp`;
   } else {
     messageSMS = `${description}`;
   }

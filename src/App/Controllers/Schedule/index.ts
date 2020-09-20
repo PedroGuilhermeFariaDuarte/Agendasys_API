@@ -47,7 +47,7 @@ class Schedule {
       ])
 
       if (!showShcedule || showShcedule.length === 0) {
-        HandlerError(response, 500, null, "Não foi possivel encontrar o seu agendamento")
+        HandlerError(response, 500, null, "Nenhuma consulta foi encontrada")
       }
 
       HandlerSuccess(response, 200, null, "Seu agendamento foi encontrado com sucesso", showShcedule)
