@@ -92,8 +92,9 @@ Nesta versão a API funciona com duas entidades, `user` e `schedule`, veja abaix
      ```json
       {
         "id_user":"5f66765fd791232348aaad97",
-        "id_responsible":"5f6677d9d791232348aaad99",
-        "date_schedule":"Sat Sep 19 2020 19:47:42 GMT-0300",
+        "name_responsible":"Teste",
+	      "local":"Teste",
+	      "specialty":"Teste",
         "qrcode":"fsdf2344343",
         "phone": "5511963092396"
       }
@@ -104,8 +105,9 @@ Nesta versão a API funciona com duas entidades, `user` e `schedule`, veja abaix
        ```json
         {
           "id_user":"5f66765fd791232348aaad97",
-          "id_responsible":"5f6677d9d791232348aaad99",
-          "date_schedule":"Sat Sep 30 2020 19:47:42 GMT-0300",
+          "name_responsible":"Teste",
+	        "local":"Teste",
+	        "specialty":"Teste",
           "qrcode":"fsdf2344343",
           "phone": "5511963092396"
         }
