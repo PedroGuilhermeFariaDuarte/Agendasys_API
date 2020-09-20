@@ -189,7 +189,7 @@ Nesta versão a API funciona com duas entidades, `user` e `schedule`, veja abaix
  
  Com a pasta aberta no terminal você poderá executar os seguintes comandos:
  
- 1.Para iniciar a API no seu modo de desenvolvimento
+ 1. Para iniciar a API no seu modo de desenvolvimento
    ```bash
     yarn dev:server
    ```
@@ -197,5 +197,8 @@ Nesta versão a API funciona com duas entidades, `user` e `schedule`, veja abaix
    ```bash 
     yarn dev:build
    ```
+ 
+ Agora sim :D, terminamos. 
+ 
  
  
