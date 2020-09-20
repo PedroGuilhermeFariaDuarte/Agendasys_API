@@ -1,4 +1,4 @@
-# Agendasys_Server
+# Agendasys Server
 
 Agendasys Server é uma API para a aplicação Agendasys
 
@@ -7,6 +7,20 @@ Agendasys Server é uma API para a aplicação Agendasys
 
 Os serviços da Agendasys estão disponiveis através desta API Rest, que quando integrada com a aplicação Agendasys possibilita que todos os pacientes do brasil tenha uma melhor qualidade de vida. 
 Para utilizar a API, você precisará de um token no estilo `JWT`, esse token será utilizado para autenticação no serviço e o uso de suas funcionalidades.
+
+## Seu Token :D, mas só para teste
+
+```bash
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY3N2Q5ZDc5MTIzMjM0OGFhYWQ5OSIsImlhdCI6MTYwMDYxNDg3MSwiZXhwIjoxNjMyMTUwODcxfQ.GuoEtUXjxLGdoWgf8OCXBOti6colgdcjxEXYBdhZwL4
+```
+
+Envie este token no cabeçalho da requisição, no campo `Authorization`
+
+## Dependências
+
+1. [Node.JS](https://nodejs.org/en/)
+2. [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
+3. [MongoDB](https://www.mongodb.com/try/download/community)
 
 ## Respostas da API
 
@@ -26,7 +40,7 @@ Toda resposta retornada pela API vem em formato `JSON` contendo um cabeçalho pa
 
 ## Códigos HTPP
 
-As respostas das requisições realizadas para a API Agendasys utilizam os códigos convencionais HTTP, indicando sucesso ou falha, sendo que o código 200 responde pelo sucesso e os que iniciam por 4xx pelas falhas, os códigos começando com 500 para apresentar falhas internas
+As respostas das requisições realizadas para a API Agendasys utilizam os códigos convencionais HTTP, indicando sucesso ou falha, sendo que o código 200 responde pelo sucesso e os que iniciam por 4xx pelas falhas, os códigos começando com 500 para apresentar falhas internas.
 
 ## End-Points
 
@@ -101,3 +115,98 @@ Nesta versão a API funciona com duas entidades, `user` e `schedule`, veja abaix
    
   4. Para visualizar um novo usuário: `/schedule/show/id_do_usuario`
       nenhuma estrutura de dados deve ser enviada
+      
+ ## Instalação e execução
+ 
+ Vamos seguir o passo-a-passo para a API funcionar perfeitamente em seu computador :D
+ 
+ 1. Em um terminal de sua prefêrencia, acesse um diretorio e execute o seguinte comando 
+ ```bash 
+    git clone https://github.com/PedroGuilhermeFariaDuarte/Agendasys_Server.git
+ ```
+ 
+ 2. Feito isso, agora acesse a pasta(Agendasys_Server) criada pelo passo anterior e execute o seguinte comando
+ ```bash 
+    yarn install
+ ```
+ 
+ Com o source da API baixado e instalado, vamos agora instalar algumas dependências no seu computador :D
+ 
+ ### Banco de Dados
+ 
+ Vamos instalar o banco de dados MongoDB, acesse [MongoDB](https://www.mongodb.com/try/download/community) e siga os passos de download e instalação.
+ 
+ Com o banco de dados instalado, vamos passar os dados de acesso como host, username, password para um arquivo da API
+ 
+ Agora, vamos abrir a pasta Agendasys_Server com o Explorer do Windows, por exemplo, e abrir o arquivo `.env.example` no bloco de notas 
+ ou em uma IDE/Editor de Texto de sua preferência.
+ 
+ Com o arquivo aberto, você verá algo parecido com isto: 
+ 
+ ```env
+   # API
+   API_PORT = YOUR PORT API
+
+   # DATABASE MONGODB
+   DB_USERNAME = YOUR USERNAME
+   DB_PASSWORD = YOUR PASSWORD
+   DB_CLUSTER = YOUR LOCALHOST
+   DB_NAME = YOUR DATABASE NAME
+
+   # SERVICES Zenvia
+   TOKEN_ZENVIA = UM TOKEN
+ ```
+ 
+ Agora, insira as informações de acesso ao banco de dados instalado anteriormente nos seus respectivos locais, por exemplo:
+ ```bash
+  # DATABASE MONGODB
+   DB_USERNAME = joaosilva
+   DB_PASSWORD = 3dfdghs69
+   DB_CLUSTER = 127.0.0.1
+   DB_NAME = silvadados
+ ```
+ 
+ ### Definindo a porta de execução e acesso da API
+ 
+ Com o arquivo `.env.example` aberto, você verá algo parecido com isto: 
+ 
+ ```env
+   # API
+   API_PORT = YOUR PORT API
+
+   # DATABASE MONGODB
+   DB_USERNAME = YOUR USERNAME
+   DB_PASSWORD = YOUR PASSWORD
+   DB_CLUSTER = YOUR LOCALHOST
+   DB_NAME = YOUR DATABASE NAME
+
+   # SERVICES Zenvia
+   TOKEN_ZENVIA = UM TOKEN
+ ```
+ 
+ Agora, insira as informações de execução e acesso a API, por exemplo:
+ 
+ ```bash
+   # API
+   API_PORT = 9988
+ ```
+ 
+ Pronto :D, renomeia o arquivo `.env.example` para `.env`., agora vamos executar a API.
+ 
+ Para iniciar a API vamor abrir o terminal e acessar a pasta (Agendasys_Server), criada nos primeiros passos.
+ 
+ Com a pasta aberta no terminal você poderá executar os seguintes comandos:
+ 
+ 1. Para iniciar a API no seu modo de desenvolvimento
+   ```bash
+    yarn dev:server
+   ```
+ 2. Para gerar uma versão de produção 
+   ```bash 
+    yarn dev:build
+   ```
+ 
+ Agora sim :D, terminamos. 
+ 
+ 
+ 
