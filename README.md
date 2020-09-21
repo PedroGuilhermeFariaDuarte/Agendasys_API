@@ -2,7 +2,7 @@
 
 # Agendasys API
 
-Uma API para a aplicação Agendasys
+Uma API para a aplicação [Agendasys](https://github.com/felipemotabr/agendasys)
 
 
 ## Introdução
