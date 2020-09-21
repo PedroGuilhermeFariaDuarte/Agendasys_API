@@ -126,7 +126,7 @@ Nesta versão a API funciona com duas entidades, `user` e `schedule`, veja abaix
  
  1. Em um terminal de sua prefêrencia, acesse um diretorio e execute o seguinte comando 
  ```bash 
-    git clone https://github.com/PedroGuilhermeFariaDuarte/Agendasys_Server.git
+    git clone https://github.com/PedroGuilhermeFariaDuarte/Agendasys_API.git
  ```
  
  2. Feito isso, agora acesse a pasta(Agendasys_Server) criada pelo passo anterior e execute o seguinte comando
